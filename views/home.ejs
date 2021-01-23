@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Index</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <style>
+        .home{
+            height: 100vh;
+            width: 100vw;
+            display: flex;
+            flex-direction: column;
+           justify-content: flex-start;
+        }
+        .header{
+            display: flex;
+            width: 90%;
+            flex-direction: row;
+            justify-content: space-between;
+            background-color: #ffffff;
+            padding: 10px;
+            margin:0 auto;
+            flex-wrap: wrap;
+            margin-bottom: 10rem;
+        }
+        .nav_link{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+        }
+        .nav_link li{
+            list-style-type: none;
+            padding: 5px 10px;
+           
+        }
+        .nav_link li a,    .nav_link li a:hover{
+            text-decoration: none;
+            color: gray;
+   
+        }
+        .main{
+            display: flex;
+            width: 90%;
+          
+          flex-direction: row;
+      flex-wrap: wrap;
+          margin:0 auto;
+        }
+        .left{
+            flex: 0.4;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        .left h1{
+            font-weight: 500;
+            font-size: 50px;
+            font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            padding: 10px 10px;
+            color: #000000;
+
+
+        }
+        .left p{
+            color: gray;
+            font-size: 17px;
+            padding: 20px 10px;
+            margin: 0px;
+            text-align: left;
+        }
+        .left .button_group{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            padding: 10px;
+            flex-wrap: wrap;
+         }
+         .button_group>button{
+             background: rgb(9, 85, 6);
+             color: #ffffff;
+             border-radius: 0px;
+             box-shadow: none !important;
+             padding: 10px 20px;
+             font-weight: 500;
+             font-size: 19px;
+             margin-bottom: 10px;
+                 }
+        .button_group >input,   .button_group >input:focus{
+       border: 1px solid #000000;
+       padding: 10px;
+       font-size: large;
+       font-weight: 400;
+       text-emphasis: none;
+       text-transform: capitalize;
+       
+                 }
+                 .right{
+                     flex: 0.6;
+                     display: flex;
+                     padding: 10px;
+                 }
+                 @media (max-width:500px){
+                    .right img{
+                     height: 100px;
+                     margin: auto;
+                     box-shadow: 3px 3px 3px 2px rgb(192, 192, 192), 3px 3px 3px 2px rgb(192, 192, 192);
+                     border: 10px solid transparent;
+                 } 
+                 }
+                 .right img{
+                     height: 350px;
+                     margin: auto;
+                     box-shadow: 3px 3px 3px 2px rgb(192, 192, 192), 3px 3px 3px 2px rgb(192, 192, 192);
+                     border: 20px solid transparent;
+                 }
+                 .option{
+                     padding: 10px;
+                     display: flex;
+                     flex-direction: column;
+                     display: none;
+                     position: absolute;
+                     bottom: 200px;
+                     left: 300px;
+                     width: fit-content;
+                     height: fit-content;
+                     background-color: #ffffff;
+                     box-shadow: 3px 3px 3px 2px rgb(192, 192, 192), 3px 3px 3px 2px rgb(192, 192, 192);
+                 }
+                 .option a,.option a:hover{
+                     padding: 10px;
+                     font-size: 22px;
+                     color: black;
+                     text-decoration: none;
+                     flex: 0.333;
+                     display: flex;
+                     color: rgb(43, 43, 43);
+                     font-weight: 400;
+                    
+                 }
+                 .option a i{
+                     font-weight: 400;
+                     font-size: 19px;
+                     padding: 5px 10px 5px 20px;
+                     align-self: flex-start;
+                 }
+               .option  a:hover{
+                    
+                     text-decoration: none;
+                   background-color: rgb(235, 232, 232);
+                 }
+    </style>
+</head>
+<body>
+    <div class="home">
+        <div class="header">
+            <a href="#"><img src="google_meet_logo.png" height="30" /> </a>
+            <ul class="nav_link">
+                <!-- <li><a href="#"><i class="fa fa-2x fa-question" aria-hidden="true"></i> </a></li>
+                <li><a href="#"><i class="fa  fa-2x fa-comment" aria-hidden="true"></i></a></li>
+                <li><a href="#"><i class="fa  fa-2x fa-cog" aria-hidden="true"></i></a></li>
+                <li><a href="#"><i class="fa  fa-2x fa-dot-circle-o" aria-hidden="true"></i> </a></li> -->
+            </ul>
+        </div>
+        <div class="main">
+            <div class="left">
+                <h1>Premium video Meetings.<br> Now free for evryone</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia incidunt nulla sint inventore dignissimos aut esse excepturi porro. Animi quasi a architecto dignissimos sed quaerat necessitatibus? Ad amet ducimus quae. elit. Error, corpo</p>
+                <div class="button_group">
+                    <button onclick="display()">New meeting</button>
+                    <input type="text" placeholder="Enter a code or link">
+                </div>
+            </div>
+            <div class="right">
+                <img src="google.jpg" height="cover" class="img-reponsive" alt="">
+            </div>
+        </div>
+    </div>
+    <div class="option">
+        <a href="/new"> <i class="fa fa-plus " aria-hidden="true"></i> Start an instant meeting</a>
+        <button type="button" onclick="create()" class="btn btn-light btn-lg" data-toggle="modal" data-target="#exampleModal">
+            
+         <i class="fa fa-code-fork " aria-hidden="true"></i> Creat a meeting for later </button>
+
+     <a href="#"> <i class="fa fa-calendar " aria-hidden="true"></i> Shedule in google calender</a>
+
+    </div>
+    
+
+
+
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">here is meeting link for later</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <input type="text" id="input"   value="<%=roomId  %> " class="form-control m-2">
+            </div>
+           
+          </div>
+        </div>
+      </div>
+
+
+   
+    <script>
+         function display(){
+             const item=document.querySelector(".option");
+             item.style.display="flex";
+
+         }
+         function create(){
+            const input=document.querySelector("#input");
+            input.value=window.location+ input.value;
+         }
+         
+    </script>
+</body>
+</html>
